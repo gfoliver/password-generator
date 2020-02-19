@@ -11,6 +11,6 @@ Generate passwords based on certain characteristics selected by the user.
 
 ## Bonus features
 
-- [ ] Use can see the password strength
+- [x] Use can see the password strength
 
 ### Project Idea from https://github.com/florinpop17/app-ideas
