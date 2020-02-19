@@ -117,8 +117,7 @@ button:hover {
     width: 0;
   }
   
-  /* Create a custom checkbox */
-  .checkmark {
+.checkmark {
     position: relative;
     top: 0;
     left: 0;
@@ -129,33 +128,28 @@ button:hover {
     border: solid 1px #ced4da;
     border-radius: 3px;
     transition: all .3s ease;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .checkmark:hover {
+}
+
+.checkmark:hover {
     background-color: #ccc;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .form-wrapper input[type=checkbox]:checked ~ .checkmark {
+}
+
+.form-wrapper input[type=checkbox]:checked ~ .checkmark {
     background-color: #3fa2f7;
     border-color: #3fa2f7;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
+}
+
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .form-wrapper input[type=checkbox]:checked ~ .checkmark:after {
+}
+
+.form-wrapper input[type=checkbox]:checked ~ .checkmark:after {
     display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .form-wrapper .checkmark:after {
+}
+
+.form-wrapper .checkmark:after {
     left: 50%;
     top: 50%;
     width: 5px;
@@ -163,4 +157,8 @@ button:hover {
     border: solid white;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg) translate(-100%, -25%);
-  }
+}
+
+.strength {
+    font-weight: bold;
+}

@@ -8,7 +8,7 @@ const submitButton = $('.submit');
 
 const types = ["uppercase", "lowercase", "numbers", "symbols"];
 
-const handleIncludes = function() {
+const handleIncludes = () => {
     let ret = {};
 
     for (const type of types) {
@@ -34,7 +34,34 @@ const generators = {
     }
 }
 
-const generatePassword = function(passwordLength, includes) {
+const checkStrength = (pass) => {
+    if (! pass)
+        return false;
+    
+    let strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+    let mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+
+    if (strongRegex.test(pass)) {
+        return {
+            className: 'success',
+            text: 'Strong'
+        }
+    } 
+    else if (mediumRegex.test(pass)) {
+        return {
+            className: 'warning',
+            text: 'Medium'
+        }
+    } 
+    else { 
+        return {
+            className: 'danger',
+            text: 'Weak'
+        }
+    }
+}
+
+const generatePassword = (passwordLength, includes) => {
 
     let typeLength = 0;
 
@@ -74,10 +101,14 @@ $(document).ready(() => {
             $('.form-wrapper').fadeOut(500);
             setTimeout(async () => {
                 $('.result').fadeIn();
+                
                 for (const char of pass) {
                     await new Promise(r => setTimeout(r, 70))
                     $('.result h2').append(char);
                 }
+
+                let strength = checkStrength(pass);
+                $('.strength').html(`<span class="text-${strength.className}">${strength.text}</span>`);
             }, 500)
         }
     });
@@ -88,6 +119,7 @@ $(document).ready(() => {
             $('.result h2').html('');
             $('.form-wrapper').fadeIn();
             $('#copy').html('Copy Password').removeClass('copied');
+            $('.strength').html('');
         }, 500)
     });
 
