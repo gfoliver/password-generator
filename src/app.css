@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E0E5EC;
+}
+
+.row {
+    height: 100vh;
+}
+
+.form-wrapper,
+.result {
+    border-radius: 15px;
+    padding: 50px;
+    background-color: #E0E5EC;
+    color: #333;
+    box-shadow: -9px -9px 16px rgba(255,255,255,0.4), 
+                9px 9px 16px rgba(163,177,198, 0.4);
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+label {
+    margin: 0;
+    font-size: 18px;
+}
+
+.form-wrapper form button.btn {
+    display: block;
+    font-weight: bold;
+    padding: 1em 1.6em;
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 15px;
+    background: #3fa2f7;
+    border: none;
+    box-shadow: -9px -9px 16px rgba(255,255,255,0.4), 9px 9px 16px rgba(163,177,198, 0.4);
+    color: #fff;
+}
+
+.result {
+    display: none;
+    position: relative;
+}
+
+.result p {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.4em;
+    word-break: break-all;
+}
+
+.form-control {
+    background: #eee;
+    border-radius: 15px;
+}
+
+.result .buttons {
+    margin-top: 20px;
+}
+
+.result .buttons .btn {
+    padding: .8em 1.6em;
+    font-weight: bold;
+    border: none;
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+.result .buttons .btn + .btn {
+    margin-left: 10px;
+}
+
+.result .buttons .btn-secondary {
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    transition: all .3s ease !important;
+    transform: scale(1);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.result .buttons .btn-primary {
+    background-color: #3fa2f7;
+    color: #fff;
+}
+
+.result .buttons .copied {
+    background-color: #394d5f;
+}
+
+.form-wrapper input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    margin-right: 10px;
+    border: solid 1px #ced4da;
+    border-radius: 3px;
+    transition: all .3s ease;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkmark:hover {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .form-wrapper input[type=checkbox]:checked ~ .checkmark {
+    background-color: #3fa2f7;
+    border-color: #3fa2f7;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .form-wrapper input[type=checkbox]:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .form-wrapper .checkmark:after {
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg) translate(-100%, -25%);
+  }
