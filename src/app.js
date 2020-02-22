@@ -63,23 +63,23 @@ const checkStrength = (pass) => {
 
 const generatePassword = (passwordLength, includes) => {
 
-    let typeLength = 0;
-
     let password = '';
+
+    let includedTypes = [];
 
     for (const include of Object.keys(includes)) {
         if (includes[include]) {
-            typeLength++;
+            includedTypes.push(include);
         }
     }
 
-    if (typeLength == 0) {
+    if (! includedTypes.length) {
         alert('Select at least one type of character');
         return false;
     }
 
     for (let i = 0; i < passwordLength; i++) {
-        let type = types[Math.floor(Math.random() * typeLength)]
+        let type = includedTypes[Math.floor(Math.random() * includedTypes.length)]
 
         password += generators[type]();
     }
