@@ -2,15 +2,21 @@
 
 Generate passwords based on certain characteristics selected by the user.
 
-## User Stories
+## Features
 
-- [x] User can select the length of the generated password
-- [x] User can select one or multiple of the following: `Include uppercase letters`, `Include lowercase letters`, `Include numbers`, `Include symbols`
-- [x] By clicking the `Generate password` button, the user can see a password being generated
-- [x] User can click a `Copy to clipboard` button which will save the password to the clipboard
+* Select the length of the generated password
+* Select one or multiple of the following: `Include uppercase letters`, `Include lowercase letters`, `Include numbers`, `Include symbols`
+* By clicking the `Generate password` button, the user can see a password being generated
+* Copy password to clipboard
+* Password strength check
 
-## Bonus features
+## Built with
 
-- [x] User can see the password strength
+* JavaScript
+* [NodeJS](https://nodejs.org/en/)
 
-### Project Idea from https://github.com/florinpop17/app-ideas
+## Authors
+
+* Guilherme Fleck Oliveira
+
+### Project Idea from [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas)
