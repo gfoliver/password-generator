@@ -1,3 +1,5 @@
+![Password Generator](https://repository-images.githubusercontent.com/241496427/34c7ce80-6a27-11ea-835b-93c24d179294)
+
 # Password Generator
 
 Generate passwords based on certain characteristics selected by the user.
