@@ -1,4 +1,4 @@
-![Password Generator](https://repository-images.githubusercontent.com/241496427/34c7ce80-6a27-11ea-835b-93c24d179294)
+![Password Generator](https://repository-images.githubusercontent.com/241496427/01397400-6a28-11ea-8c86-455467ca2a9a)
 
 # Password Generator
 
