@@ -12,6 +12,19 @@ Generate passwords based on certain characteristics selected by the user.
 * Copy password to clipboard
 * Password strength check
 
+## Usage
+
+### Web
+
+* Select the length, and the types of characters you want and click the button `Generate password`
+
+### Node
+
+* **Command:** `node index.js ${length} ${character types}`
+* **Length:** Number
+* **Character types:** initial letters without space `['u', 'l', 'n', 's']`
+* **Example:** `node index.js 20 ulns`
+
 ## Built with
 
 * JavaScript
@@ -21,4 +34,5 @@ Generate passwords based on certain characteristics selected by the user.
 
 * Guilherme Fleck Oliveira
 
-### Project Idea from [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas)
+## Credits
+* Project Idea from [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas)
