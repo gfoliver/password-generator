@@ -37,7 +37,12 @@ if (includedChars) {
     
     const password = generator.generatePassword(passLength, includedTypes);
     
-    console.log(password);
+    console.log();
+    console.log('\x1b[35m%s\x1b[0m', "Password Generator");
+    console.log();
+    console.log('\x1b[32m%s\x1b[0m', "Password: ", '\x1b[0m', password);
+    console.log('\x1b[32m%s\x1b[0m', "Strength: ", '\x1b[0m', generator.checkStrength(password).text);
+    console.log();
 } else {
-    console.log("missing parameters");
+    console.log("\x1b[31m%s\x1b[0m", "missing parameters");
 }
